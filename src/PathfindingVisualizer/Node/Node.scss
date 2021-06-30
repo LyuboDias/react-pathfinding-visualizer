@@ -1,16 +1,32 @@
+.button {
+  padding: 15px;
+  background-color: rgb(115, 230, 115);
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .node {
-  width: 25px;
-  height: 25px;
-  outline: 1px solid rgb(175, 216, 248);
-  display: inline-block;
+  width: 28px;
+  height: 28px;
+  outline: 1px solid rgb(241, 240, 240);
 }
 
 .node-finish {
-  background-color: red;
+  background-image: url("https://freesvg.org/img/treasure.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .node-start {
-  background-color: green;
+  background-image: url("https://freesvg.org/storage/img/thumb/thief.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .node-visited {
@@ -27,30 +43,37 @@
 @keyframes visitedAnimation {
   0% {
     transform: scale(0.3);
-    background-color: rgba(0, 0, 66, 0.75);
+    background-color: rgba(3, 3, 3, 0.75);
     border-radius: 100%;
   }
 
   50% {
-    background-color: rgba(17, 104, 217, 0.75);
+    background-color: rgba(131, 131, 131, 0.75);
   }
 
   75% {
     transform: scale(1.2);
-    background-color: rgba(0, 217, 159, 0.75);
+    background-color: rgba(184, 184, 184, 0.75);
   }
 
   100% {
     transform: scale(1);
-    background-color: rgba(0, 190, 218, 0.75);
+    background-color: rgba(250, 250, 250, 0.75);
   }
 }
 
 .node-wall {
-  background-color: rgb(12, 53, 71);
+  background-image: url("https://freesvg.org/storage/img/thumb/Gerald_G_Police_man.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .node-shortest-path {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
   animation-name: shortestPath;
   animation-duration: 1.5s;
   animation-timing-function: ease-out;
@@ -64,16 +87,16 @@
 @keyframes shortestPath {
   0% {
     transform: scale(0.6);
-    background-color: rgb(255, 254, 106);
+    background-image: url("https://freesvg.org/storage/img/thumb/feet.png");
   }
 
   50% {
     transform: scale(1.2);
-    background-color: rgb(255, 254, 106);
+    background-image: url("https://freesvg.org/storage/img/thumb/feet.png");
   }
 
   100% {
     transform: scale(1);
-    background-color: rgb(255, 254, 106);
+    background-image: url("https://freesvg.org/storage/img/thumb/feet.png");
   }
 }
