@@ -76,11 +76,20 @@ export default class PathfindingVisualizer extends Component {
   render() {
     const { grid, mouseIsPressed } = this.state;
 
+    function refreshPage() {
+      window.location.reload(false);
+    }
+
     return (
       <>
-        <button onClick={() => this.visualizeDijkstra()} className="button">
-          Get the money pot!
-        </button>
+        <div className="react-navbar">
+          <button onClick={refreshPage} className="button">
+            Try again
+          </button>
+          <button onClick={() => this.visualizeDijkstra()} className="button">
+            Get the money!
+          </button>
+        </div>
         <div className="grid">
           {grid.map((row, rowIdx) => {
             return (
